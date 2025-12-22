@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+@config "../tailwind.config.ts";
+
+@theme {
+  --primry_dark:'#37353E';
+  --mid_night:'#44444E';
+  --brown:'#715A5A';
+  --winter:'#D3DAD9';
+}
