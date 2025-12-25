@@ -4,6 +4,7 @@ import type { SingleMovieInterface } from "../interfaces/MovieIntrerface";
 import { axiosInstance, back_drop_image_URL, image_URL } from "../api/axiosInstance";
 import LoadingLayout from "../components/Layout/LoadingLayout";
 import { Icon } from "@iconify/react";
+import FavButton from "../components/Layout/FavButton";
 
 function ViewMovie() {
     const { id } = useParams();
@@ -89,6 +90,10 @@ function ViewMovie() {
                         <p className="text-gray-200 max-w-xl leading-relaxed">
                             {movie.overview}
                         </p>
+
+                        <div className="my-3">
+                            <FavButton movieId={Number(id)} />
+                        </div>
 
                     </div>
 

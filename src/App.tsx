@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router"
 import Movie from "./pages/Movie"
 import ViewMovie from "./pages/ViewMovie"
+import { FavoritesContextProvider } from "./context/FavoritesContext"
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
 
       <Routes>
         <Route index element={<Movie />} />
-        <Route path="/view/movie/:id" element={<ViewMovie />} />
+        <Route path="/view/movie/:id" element={<FavoritesContextProvider><ViewMovie /></FavoritesContextProvider>} />
       </Routes>
       
     </div>
